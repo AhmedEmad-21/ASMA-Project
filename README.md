@@ -4,6 +4,12 @@ A modern, responsive portfolio website for **ASMA Kitchens**, a kitchen design a
 
 ---
 
+## 🚀 Live Demo
+
+**👉 [View Live Demo](https://asma-project.vercel.app) 👈**
+
+---
+
 ## 🔍 Overview
 
 This project provides a clean, high-performance frontend built with **Next.js App Router** and **Tailwind CSS**, showcasing ASMA Kitchens' services and project gallery. It's designed with scalability and maintainability in mind, using modern React features and best practices.
@@ -70,23 +76,29 @@ src/
 ├── translations/             # i18n or localization support (if any)
 ├── types/                    # TypeScript types
 └── utils/                    # Utility/helper functions
-🛠️ Getting Started
+```
+
+---
+
+## 🛠️ Getting Started
+
 To run the project locally:
 
-bash
-نسخ
-تحرير
+```bash
 git clone https://github.com/AhmedEmad-21/ASMA-Project.git
 cd ASMA-Project
 npm install
 npm run dev
+```
+
 Then open http://localhost:3000 in your browser.
 
-🔗 Live Demo
+---
+
+## 🔗 Live Demo
+
 You can view the live version of the website here:
 
-https://asma-project.vercel.app
+**🌐 [Live Demo](https://asma-project.vercel.app)**
 
-yaml
-نسخ
-تحرير
+---
