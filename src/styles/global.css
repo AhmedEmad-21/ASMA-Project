@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --icon-color: #FFC04D; /* Orange-yellow color */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+
+main>div:first-child {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 1461px) {
+  .show-above-1461 {
+    display: none !important;
+  }
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+@keyframes border-spin {
+    0% {
+        clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+    25% {
+        clip-path: polygon(0% 0%, 100% 0%, 50% 0%, 50% 0%);
+    }
+    50% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    75% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    }
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+.animate-border-spin {
+    animation: border-spin 1s linear infinite;
+}
+
+.border-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
