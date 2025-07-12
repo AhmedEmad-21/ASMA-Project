@@ -29,6 +29,7 @@ This project provides a clean, high-performance frontend built with **Next.js Ap
 - Organized folder structure for scalability
 
 ---
+
 ## 📁 Folder Structure (src)
 
 ```txt
@@ -69,25 +70,23 @@ src/
 ├── translations/             # i18n or localization support (if any)
 ├── types/                    # TypeScript types
 └── utils/                    # Utility/helper functions
-
-## 🛠️ Getting Started
-
+🛠️ Getting Started
 To run the project locally:
 
-```bash
+bash
+نسخ
+تحرير
 git clone https://github.com/AhmedEmad-21/ASMA-Project.git
 cd ASMA-Project
 npm install
 npm run dev
 Then open http://localhost:3000 in your browser.
 
+🔗 Live Demo
+You can view the live version of the website here:
+
+https://asma-project.vercel.app
+
 yaml
 نسخ
 تحرير
-
----
-## 🔗 Live Demo
-
-You can view the live version of the website here:
-
-[https://asma-project.vercel.app](https://asma-project.vercel.app)
