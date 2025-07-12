@@ -151,7 +151,7 @@ const RequestDesignForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-lg bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e0e7ef] rounded-xl p-8 sm:p-12 space-y-6 border border-[#FFA726] lg:mt-28 lg:mb-14 shadow-none"
+      className="w-full max-w-lg bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e0e7ef] rounded-xl p-8 sm:p-12 space-y-6 border border-[#FFA726] lg:mt-28 lg:mb-14 sm:my-20 mt-20 md:mt-24 md:mb-10 shadow-none"
       autoComplete="off"
     >
       <h2 className="text-2xl font-bold text-center text-[#0C1C2D] mb-2">Request 3D Design</h2>
