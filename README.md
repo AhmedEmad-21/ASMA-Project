@@ -102,3 +102,9 @@ You can view the live version of the website here:
 **🌐 [Live Demo](https://asma-project.vercel.app)**
 
 ---
+
+## 📌 Notes
+
+- This project is **still in development**.
+- Some pages or features might be incomplete.
+- More updates and improvements are coming soon.
