@@ -1,20 +1,8 @@
 'use client';
 import React, { useState, useEffect, memo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { authApi } from '@/lib/api';
-import { FcGoogle } from 'react-icons/fc';
-import { FaFacebook, FaApple } from 'react-icons/fa';
-
-interface LoginResponse {
-    token: string;
-    user: {
-        id: string;
-        email: string;
-        name: string;
-    };
-}
 
 interface LoginFormProps {
     onSignupClick: () => void;
@@ -72,8 +60,9 @@ const LoginForm = memo(function LoginForm({ onSignupClick }: LoginFormProps) {
             sessionStorage.setItem('user', JSON.stringify(response.user));
 
             router.push('/Dashboard');
-        } catch (err: any) {
-            setError(err.message || 'Invalid email or password');
+        } catch (err: unknown) {
+            const errorMessage = err instanceof Error ? err.message : 'Invalid email or password';
+            setError(errorMessage);
         } finally {
             setIsLoading(false);
         }
@@ -168,7 +157,7 @@ const LoginForm = memo(function LoginForm({ onSignupClick }: LoginFormProps) {
 
                 <div className="text-center mt-6">
                     <p className="text-sm text-gray-600">
-                        Don't have an account?{' '}
+                        Don&apos;t have an account?{' '}
                         <button
                             onClick={onSignupClick}
                             className="font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200 no-underline"

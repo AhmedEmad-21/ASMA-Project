@@ -16,7 +16,7 @@ export default function Home() {
     setIsModalOpen(false);
   };
 
-  const showLogin = () => {};
+  const showLogin = () => { };
 
   // Placeholder images for the gallery preview
   const galleryImages = [
@@ -36,7 +36,9 @@ export default function Home() {
 
   // Scroll to the top of the page on refresh
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   // Memoize AuthModalContent only when modal is open
@@ -82,7 +84,7 @@ export default function Home() {
       />
 
       {/* Steps Section with full-width background */}
-      <div className="w-full bg-[#f8fafc] pt-16 lg:pt-20 border-b-2" style={{borderBottom: '2px solid', borderImage: 'linear-gradient(to right, #FFA600, #FFC04D) 1'}}>
+      <div className="w-full bg-[#f8fafc] pt-16 lg:pt-20 border-b-2" style={{ borderBottom: '2px solid', borderImage: 'linear-gradient(to right, #FFA600, #FFC04D) 1' }}>
         <StepsSection
           title="We make high quality modern kitchens people love to spend all time in"
           className="py-20 lg:py-24"
@@ -90,13 +92,13 @@ export default function Home() {
       </div>
 
       {/* Gallery Preview Section */}
-      <div className="w-full border-b-2" style={{borderBottom: '2px solid', borderImage: 'linear-gradient(to right, #FFA600, #FFC04D) 1'}}>
+      <div className="w-full border-b-2" style={{ borderBottom: '2px solid', borderImage: 'linear-gradient(to right, #FFA600, #FFC04D) 1' }}>
         {/* Lazy load GalleryPreview */}
         {GalleryPreview && <GalleryPreview images={galleryImages} />}
       </div>
 
       {/* Materials Section with full-width background */}
-      <div className="w-full bg-[#f8fafc] border-b-2" style={{borderBottom: '2px solid', borderImage: 'linear-gradient(to right, #FFA600, #FFC04D) 1'}}>
+      <div className="w-full bg-[#f8fafc] border-b-2" style={{ borderBottom: '2px solid', borderImage: 'linear-gradient(to right, #FFA600, #FFC04D) 1' }}>
         <header className="container mx-auto px-4 py-12 pt-16 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0C1C2D] mb-4">
             Premium Materials for Your Kitchen

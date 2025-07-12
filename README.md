@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ASMA Kitchens - Company Website
 
-## Getting Started
+A modern, responsive portfolio website for **ASMA Kitchens**, a kitchen design and interior solutions company.
 
-First, run the development server:
+---
+
+## 🔍 Overview
+
+This project provides a clean, high-performance frontend built with **Next.js App Router** and **Tailwind CSS**, showcasing ASMA Kitchens' services and project gallery. It's designed with scalability and maintainability in mind, using modern React features and best practices.
+
+---
+
+## ⚙️ Tech Stack
+
+- **Next.js 13+** (App Router)
+- **React (Hooks)**
+- **TypeScript**
+- **Tailwind CSS**
+- **ESLint**
+
+---
+
+## 🖥️ Features
+
+- Fully responsive layout
+- Modular and reusable components
+- Fast performance and optimized routing
+- Clean, maintainable codebase with TypeScript
+- Organized folder structure for scalability
+
+---
+## 📁 Folder Structure (src)
+
+```txt
+src/
+├── app/                      # Pages and routing (Next.js App Router)
+│   ├── (routes)/             # Project routes
+│   │   ├── About/
+│   │   ├── AdminDashboard/
+│   │   ├── Book-now/
+│   │   ├── Contact/
+│   │   ├── ContactUs/
+│   │   ├── Dashboard/
+│   │   ├── Design-gallery/
+│   │   ├── privacy-policy/
+│   │   ├── Request-design/
+│   │   ├── Services/
+│   │   └── terms-of-service/
+│   ├── layout.tsx            # Main layout
+│   ├── metadata.ts           # Page metadata for SEO
+│   └── page.tsx              # Default homepage
+├── components/               # Reusable UI components
+│   ├── about/
+│   ├── book-now/
+│   ├── dashboard/
+│   ├── gallery/
+│   ├── home/
+│   ├── login/
+│   ├── providers/
+│   ├── request-design/
+│   ├── services/
+│   └── shared/
+├── context/                  # React Context for global state
+├── lib/                      # Utility functions and API logic
+├── middleware.ts             # Next.js middleware
+├── styles/                   # Global and theme styles
+│   ├── global.css
+│   └── theme.css
+├── translations/             # i18n or localization support (if any)
+├── types/                    # TypeScript types
+└── utils/                    # Utility/helper functions
+
+## 🛠️ Getting Started
+
+To run the project locally:
 
 ```bash
+git clone https://github.com/AhmedEmad-21/ASMA-Project.git
+cd ASMA-Project
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+yaml
+نسخ
+تحرير

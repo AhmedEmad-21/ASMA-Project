@@ -36,7 +36,7 @@ export async function middleware(request: NextRequest) {
 
             // Token is valid, proceed with the request
             return NextResponse.next();
-        } catch (error) {
+        } catch {
             // Token is invalid, redirect to login
             const url = new URL('/Login', request.url);
             url.searchParams.set('from', pathname);

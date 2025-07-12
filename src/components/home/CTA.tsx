@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Button from '../shared/btn';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 
 // تحميل KitchenCalculator ديناميكيًا
 const KitchenCalculator = dynamic(() => import('./KitchenCalculator'), { ssr: false, loading: () => null });
@@ -11,6 +11,11 @@ const KitchenCalculator = dynamic(() => import('./KitchenCalculator'), { ssr: fa
 function CTA() {
     // حساب السنة الحالية باستخدام useMemo
     const currentYear = useMemo(() => new Date().getFullYear(), []);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     return (
         <LazyMotion features={domAnimation} strict>
@@ -70,8 +75,8 @@ function CTA() {
                             Calculate your kitchen cost in seconds
                         </p>
                     </div>
-                    {/* Only render KitchenCalculator if window is defined */}
-                    {typeof window !== 'undefined' && <KitchenCalculator />}
+                    {/* Only render KitchenCalculator on the client side */}
+                    {isClient && <KitchenCalculator />}
                 </m.div>
             </m.div>
 

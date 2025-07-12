@@ -1,8 +1,7 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import Card from '../shared/card';
-import Image from "next/image";
 import { FaTools, FaDraftingCompass, FaHammer, FaWrench } from 'react-icons/fa'; // Imported suitable icons
 
 type Props = {
@@ -19,7 +18,6 @@ const videos = [
 
 function StepsSection({ title }: Props) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [imagesPosition, setImagesPosition] = useState<{ top: string }>({ top: '10%' });
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
 
@@ -29,18 +27,6 @@ function StepsSection({ title }: Props) {
     'هذا الفيديو يشرح كيفية حجز استشارة مع خبرائنا.',
     'هذا الفيديو يشرح كيفية حجز استشارة مع خبرائنا.',
   ];
-
-  useEffect(() => {
-    if (sectionRef.current) {
-      const videoElement = sectionRef.current.querySelector('video');
-      if (videoElement) {
-        const videoTop = videoElement.getBoundingClientRect().top;
-        const sectionTop = sectionRef.current.getBoundingClientRect().top;
-        const relativeTop = ((videoTop - sectionTop) / sectionRef.current.offsetHeight) * 100;
-        setImagesPosition({ top: `${relativeTop}%` });
-      }
-    }
-  }, []);
 
   const handleCardClick = (idx: number) => {
     setActiveIndex(idx);
@@ -111,59 +97,6 @@ function StepsSection({ title }: Props) {
         </div>
 
         <div ref={sectionRef} className="relative w-full flex flex-col items-center justify-center min-h-[300px] lg:min-h-[500px]">
-          {/* البنت على الشمال */}
-          <m.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block -ml-2 sm:-ml-4 lg:-ml-8 mt-48 lg:mt-64"
-            style={{
-              width: 400,
-              height: 550,
-              top: imagesPosition.top,
-              left: 0,
-              transform: 'translateY(-50%)',
-              zIndex: 1,
-            }}
-          >
-            <Image
-              src="/images/Left.png"
-              alt="Girl left"
-              fill
-              style={{ objectFit: "contain" }}
-              sizes="300px"
-              priority={false}
-            />
-          </m.div>
-
-          {/* البنت على اليمين */}
-          <m.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block -mr-2 sm:-mr-4 lg:-mr-4 mt-48 lg:mt-66.5"
-            style={{
-              width: 400,
-              height: 550,
-              top: imagesPosition.top,
-              right: 0,
-              transform: 'translateY(-50%)',
-              zIndex: 1,
-            }}
-          >
-            <Image
-              src="/images/Right.png"
-              alt="Girl right"
-              fill
-              style={{ objectFit: "contain" }}
-              className='ml-6'
-              sizes="300px"
-              priority={false}
-            />
-          </m.div>
-
           {/* الفيديو في النص */}
           <div ref={videoRef} className="relative z-10 flex flex-col items-center w-full max-w-4xl mx-auto ">
             <p className="mb-4 text-base sm:text-lg text-[#0C1C2D] font-medium text-center">

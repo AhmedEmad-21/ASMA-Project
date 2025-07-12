@@ -82,8 +82,9 @@ const SignupForm = memo(function SignupForm({ onLoginClick }: SignupFormProps) {
                 sessionStorage.setItem('user', JSON.stringify(response.user));
                 router.push('/Dashboard');
             }
-        } catch (err: any) {
-            setError(err.message || 'Failed to create account');
+        } catch (err: unknown) {
+            const errorMessage = err instanceof Error ? err.message : 'Failed to create account';
+            setError(errorMessage);
         } finally {
             setIsLoading(false);
         }

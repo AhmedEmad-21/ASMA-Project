@@ -33,10 +33,11 @@ export default function Header({
       setIsScrolled(window.scrollY > 20);
     };
 
-    setIsScrolled(window.scrollY > 20);
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      setIsScrolled(window.scrollY > 20);
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   // Close menu when clicking outside
