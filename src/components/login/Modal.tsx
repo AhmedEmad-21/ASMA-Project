@@ -73,11 +73,12 @@ const Modal = memo(function Modal({ isOpen, onClose, children }: ModalProps) {
                 {/* Right Section with Forms */}
                 <div className="w-full lg:w-3/5 p-6 sm:p-8">
                     <button
-                        className="absolute top-4 right-5.5 text-gray-500 hover:text-gray-700 text-2xl transition-colors focus:outline-none opacity-80 hover:opacity-100"
+                        className="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-red-500 text-gray-600 hover:text-white rounded-full flex items-center justify-center text-lg font-semibold transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-red-300 shadow-sm hover:shadow-md"
                         onClick={onClose}
                         aria-label="Close Modal"
+                        title="Close"
                     >
-                        X
+                        ✕
                     </button>
                     {children || <AuthModalContent onClose={onClose} />}
                 </div>

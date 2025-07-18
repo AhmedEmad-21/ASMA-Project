@@ -109,8 +109,8 @@ export default function Header({
             {/* Call Now Button - Visible on phone and tablet */}
             <a
               href="tel:+1234567890"
-              className="lg:hidden text-white border border-white rounded-lg px-3 md:px-4 py-1.5 md:py-2 text-sm font-medium
-                hover:bg-white hover:text-[#0C1C2D] transition-all duration-300"
+              className="lg:hidden text-white border border-white rounded-lg px-3 md:px-4 py-1.5 md:py-2 text-sm lg:text-base font-medium
+                hover:bg-white hover:text-[#0C1C2D] transition-all duration-300 call-now-btn"
             >
               Call Now
             </a>

@@ -1,0 +1,16 @@
+@media (max-width: 400px) {
+  .call-now-btn {
+    font-size: 10px !important;
+    padding: 2px 8px !important;
+    min-width: 40px !important;
+    border-radius: 6px !important;
+  }
+}
+@media (max-width: 350px) {
+  .call-now-btn {
+    font-size: 8px !important;
+    padding: 1.5px 6px !important;
+    min-width: 30px !important;
+    border-radius: 5px !important;
+  }
+}

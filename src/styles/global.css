@@ -58,3 +58,20 @@ button {
     height: 100%;
     pointer-events: none;
 }
+
+@media (max-width: 350px) {
+  .call-now-btn {
+    font-size: 12px !important;
+    padding: 4px 12px !important;
+    min-width: 60px !important;
+    border-radius: 7px !important;
+  }
+}
+@media (max-width: 332px) {
+  .call-now-btn {
+    font-size: 11px !important;
+    padding: 3px 10px !important;
+    min-width: 60px !important;
+    border-radius: 6px !important;
+  }
+}
